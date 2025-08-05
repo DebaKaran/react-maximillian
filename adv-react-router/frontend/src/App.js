@@ -1,5 +1,8 @@
 // Challenge / Exercise
 
+import { RouterProvider } from "react-router-dom";
+import router from "./router/router";
+
 // 1. Add five new (dummy) page components (content can be simple <h1> elements)
 //    - HomePage
 //    - EventsPage
@@ -21,7 +24,7 @@
 // BONUS: Add another (nested) layout route that adds the <EventNavigation> component above all /events... page components
 
 function App() {
-  return <div></div>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
