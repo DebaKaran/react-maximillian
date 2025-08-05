@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+/* From RootLayout.module.css */
+.content {
+  margin: 2rem auto;
+  text-align: center;
+}
