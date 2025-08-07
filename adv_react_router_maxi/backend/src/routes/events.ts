@@ -16,7 +16,9 @@ interface EventInput {
 router.get("/", async (req: Request, res: Response, next: NextFunction) => {
   try {
     const events = await getAll();
-    res.json({ events });
+    setTimeout(() => {
+      res.json({ events });
+    }, 1500);
   } catch (error) {
     next(error);
   }
