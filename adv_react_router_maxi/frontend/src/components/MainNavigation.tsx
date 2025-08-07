@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
+import type { JSX } from "react";
 
 function MainNavigation(): JSX.Element {
   return (

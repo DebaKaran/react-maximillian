@@ -1,14 +1,8 @@
+import type { EventSummary } from "../types/types";
 import classes from "./EventsList.module.css";
 
-type Event = {
-  id: string;
-  title: string;
-  image: string;
-  date: string;
-};
-
 interface EventsListProps {
-  events: Event[];
+  events: EventSummary[];
 }
 
 function EventsList({ events }: EventsListProps) {

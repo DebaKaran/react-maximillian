@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import classes from "./EventsNavigation.module.css";
+import type { JSX } from "react";
 
 function EventsNavigation(): JSX.Element {
   return (

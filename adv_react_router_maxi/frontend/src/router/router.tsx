@@ -8,6 +8,7 @@ import EditEventPage from "../pages/EditEventPage";
 import EventsRoot from "../pages/EventsRoot";
 import Events from "../pages/Events";
 import RootLayout from "../pages/Root";
+import { getEvents } from "../pages/loaders/eventsLoader";
 
 const routes: RouteObject[] = [
   {
@@ -19,7 +20,7 @@ const routes: RouteObject[] = [
         path: "events",
         element: <EventsRoot />,
         children: [
-          { index: true, element: <Events /> },
+          { index: true, element: <Events />, loader: getEvents },
           { path: "new", element: <NewEventPage /> },
           {
             path: ":eventId",

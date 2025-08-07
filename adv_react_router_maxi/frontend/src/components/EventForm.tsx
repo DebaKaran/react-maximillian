@@ -1,14 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import classes from "./EventForm.module.css";
-
-// Define the shape of the event data
-type EventData = {
-  title: string;
-  image: string;
-  date: string;
-  description: string;
-};
+import type { EventData } from "../types/types";
 
 // Define props for the component
 interface EventFormProps {

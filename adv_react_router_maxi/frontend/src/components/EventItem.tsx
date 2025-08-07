@@ -1,12 +1,5 @@
+import type { Event } from "../types/types";
 import classes from "./EventItem.module.css";
-
-type Event = {
-  id: string;
-  title: string;
-  image: string;
-  date: string;
-  description: string;
-};
 
 interface EventItemProps {
   event: Event;
