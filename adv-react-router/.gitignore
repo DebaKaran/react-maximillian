@@ -1,6 +1,0 @@
-# Ignore all node_modules folders
-**/node_modules
-
-# Optional: Ignore logs and environment files
-*.log
-.env
