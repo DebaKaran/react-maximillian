@@ -9,11 +9,13 @@ import EventsRoot from "../pages/EventsRoot";
 import Events from "../pages/Events";
 import RootLayout from "../pages/Root";
 import { getEvents } from "../pages/loaders/eventsLoader";
+import ErrorPage from "../pages/ErrorPage";
 
 const routes: RouteObject[] = [
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
       {
