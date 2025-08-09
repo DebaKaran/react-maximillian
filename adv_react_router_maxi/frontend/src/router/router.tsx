@@ -33,7 +33,11 @@ const routes: RouteObject[] = [
                 element: <EventDetailPage />,
                 loader: getEventDetail,
               },
-              { path: "edit", element: <EditEventPage /> },
+              {
+                path: "edit",
+                element: <EditEventPage />,
+                loader: getEventDetail,
+              },
             ],
           },
         ],
