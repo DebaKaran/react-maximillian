@@ -32,6 +32,12 @@ export async function newEventAction({ request }: ActionFunctionArgs) {
     body: JSON.stringify(eventData),
   });
 
+  // === Validation errors from backend:
+  if (response.status === 422) {
+    const data = await response.json();
+    return data; // { message, errors }
+  }
+
   if (!response.ok) {
     throw new Response(
       JSON.stringify({ message: "Could not add new event..." }),

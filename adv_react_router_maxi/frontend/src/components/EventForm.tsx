@@ -1,5 +1,6 @@
 import {
   Form,
+  useActionData,
   useNavigate,
   useNavigation,
   type HTMLFormMethod,
@@ -14,7 +15,11 @@ interface EventFormProps {
   event?: EventData;
 }
 
+type ActionData = { message?: string; errors?: Record<string, string> } | null;
+
 function EventForm({ method, event }: EventFormProps) {
+  const actionData = useActionData() as ActionData;
+
   const navigate = useNavigate();
   const navigation = useNavigation();
 
@@ -26,6 +31,13 @@ function EventForm({ method, event }: EventFormProps) {
 
   return (
     <Form className={classes.form} method={method}>
+      {actionData?.errors && (
+        <ul className="error-list">
+          {Object.values(actionData.errors).map((msg) => (
+            <li key={msg}>{msg}</li>
+          ))}
+        </ul>
+      )}
       <p>
         <label htmlFor="title">Title</label>
         <input
