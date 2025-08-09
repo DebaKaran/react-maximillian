@@ -13,6 +13,7 @@ import ErrorPage from "../pages/ErrorPage";
 import { getEventDetail } from "../pages/loaders/eventDetailLoader";
 import { newEventAction } from "../pages/loaders/newEventAction";
 import { deleteEventAction } from "../pages/loaders/eventDetailsAction";
+import { updateEventAction } from "../pages/loaders/updateEventAction";
 
 const routes: RouteObject[] = [
   {
@@ -40,6 +41,7 @@ const routes: RouteObject[] = [
               {
                 path: "edit",
                 element: <EditEventPage />,
+                action: updateEventAction,
               },
             ],
           },
