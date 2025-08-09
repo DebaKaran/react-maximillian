@@ -11,6 +11,7 @@ import RootLayout from "../pages/Root";
 import { getEvents } from "../pages/loaders/eventsLoader";
 import ErrorPage from "../pages/ErrorPage";
 import { getEventDetail } from "../pages/loaders/eventDetailLoader";
+import { newEventAction } from "../pages/loaders/newEventAction";
 
 const routes: RouteObject[] = [
   {
@@ -24,7 +25,7 @@ const routes: RouteObject[] = [
         element: <EventsRoot />,
         children: [
           { index: true, element: <Events />, loader: getEvents },
-          { path: "new", element: <NewEventPage /> },
+          { path: "new", element: <NewEventPage />, action: newEventAction },
           {
             path: ":eventId",
             loader: getEventDetail,

@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import { Form, useNavigate, type HTMLFormMethod } from "react-router-dom";
 
 import classes from "./EventForm.module.css";
 import type { EventData } from "../types/types";
 
 // Define props for the component
 interface EventFormProps {
-  method: string;
+  method: HTMLFormMethod;
   event?: EventData;
 }
 
@@ -17,7 +17,7 @@ function EventForm({ method, event }: EventFormProps) {
   }
 
   return (
-    <form className={classes.form} method={method}>
+    <Form className={classes.form} method={method}>
       <p>
         <label htmlFor="title">Title</label>
         <input
@@ -64,7 +64,7 @@ function EventForm({ method, event }: EventFormProps) {
         </button>
         <button>Save</button>
       </div>
-    </form>
+    </Form>
   );
 }
 

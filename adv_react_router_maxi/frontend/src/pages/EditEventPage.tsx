@@ -1,4 +1,4 @@
-import { useLoaderData, useRouteLoaderData } from "react-router-dom";
+import { useRouteLoaderData } from "react-router-dom";
 import EventForm from "../components/EventForm";
 import type { EventData, Event } from "../types/types";
 
