@@ -10,6 +10,7 @@ import Events from "../pages/Events";
 import RootLayout from "../pages/Root";
 import { getEvents } from "../pages/loaders/eventsLoader";
 import ErrorPage from "../pages/ErrorPage";
+import { getEventDetail } from "../pages/loaders/eventDetailLoader";
 
 const routes: RouteObject[] = [
   {
@@ -27,7 +28,11 @@ const routes: RouteObject[] = [
           {
             path: ":eventId",
             children: [
-              { index: true, element: <EventDetailPage /> },
+              {
+                index: true,
+                element: <EventDetailPage />,
+                loader: getEventDetail,
+              },
               { path: "edit", element: <EditEventPage /> },
             ],
           },
