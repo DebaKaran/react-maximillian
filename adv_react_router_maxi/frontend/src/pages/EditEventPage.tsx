@@ -1,9 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useRouteLoaderData } from "react-router-dom";
 import EventForm from "../components/EventForm";
 import type { EventData, Event } from "../types/types";
 
 const EditEventPage = () => {
-  const { event } = useLoaderData() as { event: Event };
+  const { event } = useRouteLoaderData("event-detail") as { event: Event };
 
   const eventData: EventData = {
     title: event.title,

@@ -27,16 +27,16 @@ const routes: RouteObject[] = [
           { path: "new", element: <NewEventPage /> },
           {
             path: ":eventId",
+            loader: getEventDetail,
+            id: "event-detail",
             children: [
               {
                 index: true,
                 element: <EventDetailPage />,
-                loader: getEventDetail,
               },
               {
                 path: "edit",
                 element: <EditEventPage />,
-                loader: getEventDetail,
               },
             ],
           },
