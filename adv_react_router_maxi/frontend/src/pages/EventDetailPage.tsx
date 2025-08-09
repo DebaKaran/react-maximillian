@@ -4,7 +4,6 @@ import type { Event } from "../types/types";
 
 const EventDetailPage = () => {
   const { event } = useRouteLoaderData("event-detail") as { event: Event };
-  console.log("Event from loader:", event);
   return <EventItem event={event} />;
 };
 
